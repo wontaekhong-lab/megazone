@@ -67,7 +67,7 @@ sdf = spark.table("samples.nyctaxi.trips")
 
 # DBTITLE 1,Cell 5
 # MAGIC %sql
-# MAGIC USE CATALOG dbacademy;
+# MAGIC USE CATALOG magazon;
 # MAGIC USE SCHEMA ingestion_lab;
 
 # COMMAND ----------
@@ -103,7 +103,7 @@ sdf = spark.table("samples.nyctaxi.trips")
 
 # DBTITLE 1,Cell 11
 # MAGIC %sql
-# MAGIC LIST '/Volumes/dbacademy/ingestion_lab/taxi_files';
+# MAGIC LIST '/Volumes/magazon/ingestion_lab/taxi_files';
 
 # COMMAND ----------
 
@@ -116,7 +116,7 @@ sdf = spark.table("samples.nyctaxi.trips")
 
 # DBTITLE 1,Cell 13
 # MAGIC %sql
-# MAGIC SELECT * FROM csv.`/Volumes/dbacademy/ingestion_lab/taxi_files`;
+# MAGIC SELECT * FROM csv.`/Volumes/magazon/ingestion_lab/taxi_files`;
 
 # COMMAND ----------
 
@@ -165,7 +165,7 @@ sdf = spark.table("samples.nyctaxi.trips")
 # DBTITLE 1,Cell 17
 # MAGIC %sql
 # MAGIC COPY INTO taxitrips_bronze
-# MAGIC FROM '/Volumes/dbacademy/ingestion_lab/taxi_files'
+# MAGIC FROM '/Volumes/magazon/ingestion_lab/taxi_files'
 # MAGIC FILEFORMAT = CSV
 # MAGIC FORMAT_OPTIONS ('header' = 'true', 'inferSchema' = 'true');
 
